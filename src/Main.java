@@ -82,6 +82,9 @@ class frameClass implements ActionListener {
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.setResizable(false);
         frame.setDefaultCloseOperation(3);
+        //Setting BackGround
+        Container cnt=frame.getContentPane();
+        cnt.setBackground(Color.BLACK);
 
         //LENGTHS OF FRAME
         int x=frame.getWidth();
@@ -101,6 +104,7 @@ class frameClass implements ActionListener {
             l=new JLabel();
             l.setBounds(x/3,y/4,800,300);
             l.setFont(f4);
+            l.setForeground(Color.yellow);
             frame.add(l);
 
             //Welcome
@@ -111,7 +115,7 @@ class frameClass implements ActionListener {
             }
             else        //last Score
             {
-                l.setText("Your Score: "+count);
+                l.setText("Your Score: "+count+"/"+Q.length);
                 next.setText("Restart");
             }
         }
@@ -142,11 +146,25 @@ class frameClass implements ActionListener {
             l=new JLabel(Ques);
             l.setBounds(50,40,x-60,100);
             l.setFont(f);
+            l.setForeground(Color.white);
 
             A.setBounds(120,150,300,50);
             B.setBounds(500,150,300,50);
             C.setBounds(120,220,300,50);
             D.setBounds(500,220,300,50);
+
+            //Setting BackGround of button
+//            A.setBackground(Color.BLACK);
+//            B.setBackground(Color.BLACK);
+//            C.setBackground(Color.BLACK);
+//            D.setBackground(Color.BLACK);
+
+            //Setting Button Text Color
+//            A.setForeground(Color.white);
+//            B.setForeground(Color.white);
+//            C.setForeground(Color.white);
+//            D.setForeground(Color.white);
+
 
             A.setFont(f1);
             B.setFont(f1);
